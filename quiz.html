@@ -7,6 +7,7 @@
 
 
 <body>
+  <u><h1>HTML Quiz</h1></u>
     <div id="quiz"></div>
     <button id="submit">Submit Quiz</button>
     <div id="results"></div>
@@ -15,7 +16,7 @@
         function buildQuiz() {
           // we'll need a place to store the HTML output
           const output = [];
-      
+          
           // for each question...
           myQuestions.forEach((currentQuestion, questionNumber) => {
             // we'll want to store the list of answer choices
@@ -70,12 +71,14 @@
               // color the answers red
               answerContainers[questionNumber].style.color = "red";
             }
+            
           });
       
           // show number of correct answers out of total
           resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         }
-      
+        
+        
         const quizContainer = document.getElementById("quiz");
         const resultsContainer = document.getElementById("results");
         const submitButton = document.getElementById("submit");
@@ -287,6 +290,7 @@
         // on submit, show results
         submitButton.addEventListener("click", showResults);
       })();
+      
 </script>
     
 </body>
